@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <title>jQuery</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> -->
+  </head>
+
+  <body>
+    <!-- 베너영역 -->
+    <div id="banner">
+      <a href="#" id="banner-link" target="_blank">
+        <img src="" id="banner-img" width="320" />
+      </a>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      let banner = [
+        { img: "img/batman.png", url: "https://www.naver.com" },
+        { img: "img/captainamerica.png", url: "https://www.google.com" },
+        { img: "img/hulk.png", url: "https://www.daum.com" },
+        { img: "img/ironman.png", url: "https://www.youtube.com" },
+      ];
+      //   $(function () {
+      //     setInterval(function () {
+      //       let rannum = parseInt(Math.random() * 4);
+      //       $("#banner-img").attr("src", banner[rannum].img);
+      //       $("#banner-link").attr("href", banner[rannum].url);
+      //     }, 1000);
+      //   });
+
+      $(function () {
+        setInterval(
+          random_banner,
+
+          1000
+        );
+      });
+
+      function random_banner() {
+        let rand = random(0, banner.length - 1);
+        let item = banner[rand];
+        // 배너에 적용
+        $("#banner-img").attr("src", banner[rand].img);
+        $("#banner-link").attr("href", banner[rand].url);
+      }
+      function random(n1, n2) {
+        return parseInt(Math.random() * (n2 - n1 + 1)) + n1;
+      }
+    </script>
+  </body>
+</html>

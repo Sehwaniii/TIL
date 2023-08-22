@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      <label
+        >prevent event onClick
+        <input type="checkbox" id="prevent" />
+      </label>
+    </p>
+    <p>
+      <a id="target1" href="https://www.naver.com">naver</a>
+    </p>
+
+    <form id="target2" action="https://www.naver.com">
+      <input type="submit" />
+    </form>
+
+    <script>
+      document.getElementById("target1").onclick = function (event) {
+        if (document.getElementById("prevent").checked) {
+          return false;
+        }
+      };
+      document.getElementById("target2").onsubmit = function (event) {
+        if (document.getElementById("prevent").checked) {
+          return false;
+        }
+      };
+      // document.getElementsByTagName('a')[0].onclick = function(event){
+      //     if(document.getElementById('prevent').checked){
+      //         return false
+      //     }
+      // }
+      // document.getElementsByTagName('form')[0].onsubmit = function(event){
+      //     if(document.getElementById('prevent').checked){
+      //         return false
+      //     }
+      // }
+    </script>
+  </body>
+</html>

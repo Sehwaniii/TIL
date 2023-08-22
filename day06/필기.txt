@@ -1,0 +1,114 @@
+1. HTML 태그 없이 요소 추가 클래스
+- before는 시작태그 직후, after는 종료 태그 직전
+- 이 가상 클래스가 사용된 블록에서는 content속성을 사용하여 직접 HTML태그를 추가할 수 있다.
+
+2. Block-Level vs Inline-Level
+- Block-Level
+    :width와 height가 적용할 수 있다.
+    이 요소는 하나의 문단으로 처리되기 때문에
+    태그 다음에 나타나는 요소는 자동 줄 바꿈 된다.
+    display:block;
+
+- Inline-Level
+    :width와 height를 부여하더라도 적용되지 않는다.
+    하나의 단어나 강조 구문처럼 인식되기 때문에
+    태그 다음의 요소는 줄 바꿈 되지 않는다.
+    display:inline;
+
+- display:none;
+    :이 속성이 적용된 요소는 화면상에 표시되지 않는다.
+
+2-1. display:inline-block
+- Block-Level요소의 특성과 Inline-Level요소의 특성을 혼합한 형태
+    > Block 특성 : 크기 지정 가능함
+    > Inline 특성 : 문장으로 형성됨
+- 즉, 크기를 지정할 수 있는 Inline-Level요소로 처리
+
+3. 포지션
+- 엘리먼트를 위치를 지정하는 4가지 방법
+- static, relative, absolute, fixed
+
+4. link와 import
+- 외부 파일을 빼는 방법은 크게 두 가지 입니다.
+1. <link rel="stylesheet" href="style.css"/>
+2. <style> @import url('style.css') </style>
+
+5. 브라우저 cache 메모리
+- Cache : 자주 접근하는 데이터를 복사해 놓는 임시 저장소
+- Browser Cache : 서버 지연을 줄이기 위해 사용하는 웹 캐시의 일종
+
+-----------------------------------------------------------------------
+1. 바닐라 스크립트(Vanilla JS)
+- 바닐라 자바 스크립트는 플러그인이나, 라이브러리를 사용하지 않은 순수 자바스크립트를 이야기 합니다.
+- 바닐라 자바스크립트 = 자바스크립트
+- 아무것도 다운받지 않아도 되니 가볍고 빠르다.
+
+2. JavaScript에 영향을 준 언어
+- Java : 기본적인 문법
+- Scheme 
+- Self
+
+3. JavaScript 버전
+- ES6
+
+4. 변수의 사용방법
+4-1. 변수의 선언
+- 선언은 var키워드 뒤에 사용하고자 하는 변수의 이름을 지정하고 세미콜론으로 한 라인을 종료
+
+    var num;
+    var hello;
+
+4-2. 변수의 할당
+- 선언된 변수에 원하는 값을 대입하는 과정을 의미한다. 숫자형식이나 문자열 등을 사용
+
+    num = 12345;
+    hello = '안녕하세요';
+    hello = "안녕하세요";
+
+4-3. 변수의 종류
+- JavaScript의 변수는 표현하는 값의 종류에 따라서 형식이 구분된다.
+- 이러한 변수의 종류를 데이터형이라고 한다.
+- 데이터타입(Data Type), 변수형 등도 같은 의미로 사용
+- Number
+    정수, 실수
+- String
+    문자열 표현
+- Boolean
+    true, false
+- Object
+    객체를 저장하기 위한 데이터 타입
+- Null
+    값 없음, 개발자가 의도적으로 변수의 공간을 비워 놓은 상태를 의미로
+- undefined
+    정의되지 않음, 처음부터 변수가 선언만 되고 아무런 값도 할당되지 않은 상태를 의미.
+    이 상태의 변수는 어떠한 처리도 불가능 하다.
+
+5. 연산자 종류
+5-1. 대입연산자
+5-2. 사칙연산자
+5-3. 단항연산자
+    var x = 100;
+    x = x + 5;
+    --------------
+    x += 5;
+5-4. 증감연산자
+5-5. 비교연산자
+5-6. 논리연산자
+
+6. HTML에 결과를 출력하기
+6-1. document.write(출력내용)
+- HTML 페이지의 <body> 태그 안을 JavaScript에서는 document(=문서)라고 부른다.
+- HTML 태그를 포함하여 출력할 수 있다.
+- 출력되는 내용은 기존에 존재하던 <body> 태그 안의 모든 내용을 지우고 새롭게 작성된다.
+
+    document.write("<h1>내용</h1>");
+
+7. 조건문
+- if문
+- if ~ else문
+- if else if ~ else문
+- switch문
+
+
+
+

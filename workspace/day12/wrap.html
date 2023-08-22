@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <title>jQuery</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style>
+      div {
+        border: 2px blue solid;
+        margin: 2px;
+        padding: 2px;
+      }
+      p {
+        background: yellow;
+        margin: 2px;
+        padding: 2px;
+      }
+      strong {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <span> span text </span>
+    <strong>what about me?</strong>
+    <span>Another one</span>
+    <script>
+      $("span ").wrap("<div><div><p><em><b>  </b></em></p></div></div>");
+    </script>
+  </body>
+</html>

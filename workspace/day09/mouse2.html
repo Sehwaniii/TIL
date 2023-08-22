@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 onmouseover="showResult()" onmouseout="outResult()">
+      10 + 50 = <span id="result">?</span>
+    </h1>
+    <p>결과를 보시려면 수식 위에 마우스를 올리세요.</p>
+    <script>
+      function showResult() {
+        // let result = document.getElementById("result");
+        // result.innerHTML = 60;
+
+        // result.style.color = "tomato";
+        let red_result = "<font color = 'red'>60</font>";
+        document.getElementById("result").innerHTML = red_result;
+      }
+
+      function outResult() {
+        // let result = document.getElementById("result");
+        // result.innerHTML = "?";
+        document.getElementById("result").innerHTML = "?";
+      }
+    </script>
+  </body>
+</html>

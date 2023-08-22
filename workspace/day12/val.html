@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <title>jQuery</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style>
+      p {
+        color: powderblue;
+        margin: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" value="some text" />
+    <p></p>
+
+    <script>
+      $("input").keyup(function () {
+        let value = $(this).val();
+        $("p").text(value);
+      });
+    </script>
+  </body>
+</html>
